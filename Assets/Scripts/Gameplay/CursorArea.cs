@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 [RequireComponent(typeof(RectTransform))]
 public class CursorArea : MonoBehaviour
 {
-    [SerializeField] private Texture2D _cursorImage;
+    [SerializeField] private CursorData _cursorData;
+    [Inject] private CursorManipulator _cursor;
 
     private bool _inArea;
 
@@ -17,7 +19,7 @@ public class CursorArea : MonoBehaviour
             if (!_inArea)
             {
                 _inArea = true;
-                Cursor.SetCursor(_cursorImage, Vector2.zero, CursorMode.Auto);
+                _cursor.AddCursor(_cursorData);
             }
         }
         else
@@ -25,7 +27,7 @@ public class CursorArea : MonoBehaviour
             if (_inArea)
             {
                 _inArea = false;
-                Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+                _cursor.RemoveCursor(_cursorData);
             }
         }
     }
