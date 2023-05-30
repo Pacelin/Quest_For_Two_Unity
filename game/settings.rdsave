@@ -1,0 +1,16 @@
+﻿{
+"version":9,
+"calibration_i":0.0006666667,
+"calibration_i_P2":0.0006666667,
+"latency":0.6,
+"calibration_v":0.03000001,
+"default_resolution":true,
+"VSync":true,
+"global_volume":10,
+"voiceLanguage":"English",
+"did_calibration":true,
+"windowdance_changed_resolution":false,
+"resolution_width":1920,
+"resolution_height":1080,
+"is_fullscreen":true
+}

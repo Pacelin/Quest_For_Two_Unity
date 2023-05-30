@@ -66,8 +66,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac044d61d2f134740a2c4707a9954d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionOnLMB: {fileID: 7635652530253927899}
-  ActionOnRMB: {fileID: 0}
+  ActionsOnLMB:
+  - {fileID: 7635652530253927899}
+  ActionsOnRMB: []
 --- !u!114 &7635652530253927899
 MonoBehaviour:
   m_ObjectHideFlags: 0
