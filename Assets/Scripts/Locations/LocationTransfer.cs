@@ -1,11 +1,19 @@
 using UnityEngine;
-using Zenject;
 
-public class LocationTransfer : InputAction
+public class LocationTransfer : MonoBehaviour
 {
     [SerializeField] private Location _nextLocation;
-    [Inject] private ISwitch<Location> _locationSwitch;
+    [SerializeField] private Location _currentLocation;
+    [Space]
+    [SerializeField] private float _fadeOutDelay = 0;
+    [SerializeField] private float _fadeOutTime = 0.4f;
+    [Space]
+    [SerializeField] private float _fadeInDelay = 0.2f;
+    [SerializeField] private float _fadeInTime = 0.3f;
 
-    public override void ApplyAction() =>
-        _locationSwitch.Switch(to: _nextLocation);
+    public void ApplyTransfer()
+    {
+        StartCoroutine(_currentLocation.Hide(_fadeOutDelay, _fadeOutTime));
+        StartCoroutine(_nextLocation.Show(_fadeInDelay, _fadeInTime));
+    }
 }

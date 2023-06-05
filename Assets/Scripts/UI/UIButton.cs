@@ -5,6 +5,7 @@ public class UIButton : MonoBehaviour, IPointerClickHandler
 {
     public event System.Action<UIButton> OnLMBClick;
     public event System.Action<UIButton> OnRMBClick;
+    
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
