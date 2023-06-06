@@ -69,7 +69,7 @@ MonoBehaviour:
   _nextLocation: {fileID: 0}
   _currentLocation: {fileID: 0}
   _fadeOutDelay: 0
-  _fadeOutTime: 0.4
+  _fadeOutTime: 0.3
   _fadeInDelay: 0.2
   _fadeInTime: 0.3
 --- !u!222 &4460669451455492745
